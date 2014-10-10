@@ -1,0 +1,15 @@
+{
+  "name": "SkyHex",
+  "version": "1.0.0",
+  "description": "What hex is the sky",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.9.6",
+    "socket.io": "^1.1.0"
+  }
+}
