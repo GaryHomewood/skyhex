@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "What hex is the sky",
   "main": "server.js",
+  "repository": "https://github.com/GaryHomewood/skyhex",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Gary Homewood",
   "license": "ISC",
   "devDependencies": {
     "express": "^4.9.6",
