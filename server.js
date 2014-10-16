@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 
+app.use(require('connect-livereload')({port: 4002}));
 app.use(express.static(__dirname + '/public'));
 
 app.get('', function(req, res) {
