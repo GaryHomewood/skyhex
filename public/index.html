@@ -15,8 +15,10 @@
         <p></p>
       </div>
       <img id="skyphoto" src="/images/img.png"/>
-      <form action="/snap" method="POST">
-          <button type="submit" class="btn btn-lg btn-primary btn-block">
+      <div class="clearfix colour-history">
+      </div>
+      <form action="" method="POST">
+          <button id="take-photo" type="submit" class="btn btn-lg btn-primary">
             <span class="glyphicon glyphicon-camera"></span> take photo
           </button>
       </form>
@@ -25,8 +27,16 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/scripts/color-thief.min.js"></script>
+    <script src='/scripts/one-color.js'></script>
     <script src="/scripts/client.js"></script>
     <script>
     SKYHEX.updatePhoto();
+
+var socket = io();
+$('#take-photo').click(function(){
+  socket.emit('take-photo', 'take-photo');
+  return false;
+});
+
     </script>
 </body>

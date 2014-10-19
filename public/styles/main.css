@@ -22,3 +22,12 @@ img {
   text-align:center;
   padding-top:8px;
 }
+.colour-history {
+  border-top:1px solid #2d2d2d;
+  min-height:50px;
+}
+.colour-history-item {
+  width:50px;
+  height:50px;
+  float: left;
+}
