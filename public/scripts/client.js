@@ -4,6 +4,8 @@ SKYHEX = {
     updatePhoto: function() {
         var socket = io();
         var src = "";
+        $("body").tooltip({ selector: '[data-toggle="tooltip"]' });
+        $('#colour-history-item').tooltip();
 
         $('#skyphoto').load(function() {
             // get the dominant colour once the image is loaded
@@ -20,8 +22,8 @@ SKYHEX = {
             $('.colour').css('background-color', hex);
             $('.colour p').text(hex);
 
-            // also add the current colour to the history
-            var historyitem = $("<div class='colour-history-item'><span>" + hex + "</span></div>");
+            // add a swatch of the current colour to the history
+            var historyitem = $("<div class='colour-history-item' data-toggle='tooltip' title='HEX: " + hex + "'></div>");
             historyitem.css('background-color', hex);
             if ($('.colour-history-item').length) {
                 $('.colour-history-item').first().before(historyitem);
